@@ -1,0 +1,8 @@
+Wed Nov  1 01:49:53 PM EDT 2023
+testsyntax2.txt
+----------------------------------------------------------
+
+   1  -- Error in function header, missing colon
+   2  
+   3  function main asyntax error, unexpected IDENTIFIER, expecting RETURNS
+     

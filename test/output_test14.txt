@@ -1,0 +1,8 @@
+Wed Nov  1 01:49:53 PM EDT 2023
+test14.txt
+----------------------------------------------------------
+
+   1  // Comprehensive test with nested case
+   2  
+   3  function main asyntax error, unexpected IDENTIFIER, expecting RETURNS
+     

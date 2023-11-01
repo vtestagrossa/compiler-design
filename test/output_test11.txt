@@ -1,0 +1,12 @@
+Wed Nov  1 01:49:53 PM EDT 2023
+test11.txt
+----------------------------------------------------------
+
+   1  // Arithmetic operators
+   2  
+   3  function main returns integer;
+   4  begin
+   5      9 + 2 - (5 - 1) / 2 rem 3 * 3 ** 1 ** 2;
+syntax error, unexpected invalid token, expecting ';'
+   6  end;
+   7       

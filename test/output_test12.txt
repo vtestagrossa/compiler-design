@@ -1,0 +1,12 @@
+Wed Nov  1 01:49:53 PM EDT 2023
+test12.txt
+----------------------------------------------------------
+
+   1  -- Relational and logical operators
+   2  
+   3  function main returns boolean;
+   4  begin
+   5      5 > 8 and 3 = 3 or 9 < 1 and not (3 /= 7) or 6 <= 7 and 3 >= 9 or not true and not not false;
+syntax error, unexpected invalid token, expecting ';'
+   6  end;
+   7       

@@ -1,0 +1,8 @@
+Wed Nov  1 01:49:53 PM EDT 2023
+test10.txt
+----------------------------------------------------------
+
+   1  -- Two parameter declarations
+   2  
+   3  function main asyntax error, unexpected IDENTIFIER, expecting RETURNS
+     

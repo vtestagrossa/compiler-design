@@ -1,0 +1,12 @@
+Wed Nov  1 01:49:53 PM EDT 2023
+test3.txt
+----------------------------------------------------------
+
+   1  -- Function with an Boolean Variable
+   2  
+   3  function test3 returns boolean;
+   4      b: boolean is 5 < 2;
+   5  begin
+   6      b and 2 < 8 + 1 * 7;    
+   7  end;
+   8       

@@ -1,0 +1,8 @@
+Wed Nov  1 01:49:53 PM EDT 2023
+test5.txt
+----------------------------------------------------------
+
+   1  -- Function with a Real Variable and Boolean and Real Literals
+   2  
+   3  function main returns BOOLEANsyntax error, unexpected IDENTIFIER, expecting BOOLEAN or INTEGER
+     

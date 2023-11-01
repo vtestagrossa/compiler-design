@@ -1,0 +1,10 @@
+Wed Nov  1 01:49:53 PM EDT 2023
+test8.txt
+----------------------------------------------------------
+
+   1  -- Multiple integer variable initialization
+   2  
+   3  function main returns integer;
+   4      b: integer is 5 + 1 - 4;
+   5      csyntax error, unexpected IDENTIFIER, expecting BEGIN_
+     

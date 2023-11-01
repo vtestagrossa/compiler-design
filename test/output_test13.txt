@@ -1,0 +1,8 @@
+Wed Nov  1 01:49:53 PM EDT 2023
+test13.txt
+----------------------------------------------------------
+
+   1  -- Comprehensive test with nested if
+   2  
+   3  function main asyntax error, unexpected IDENTIFIER, expecting RETURNS
+     

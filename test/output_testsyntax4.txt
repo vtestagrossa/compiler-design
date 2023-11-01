@@ -1,0 +1,8 @@
+Wed Nov  1 01:49:53 PM EDT 2023
+testsyntax4.txt
+----------------------------------------------------------
+
+   1  -- Multiple errors, error in when clause and missing others clause
+   2  
+   3  function main asyntax error, unexpected IDENTIFIER, expecting RETURNS
+     

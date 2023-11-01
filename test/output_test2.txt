@@ -1,0 +1,10 @@
+Wed Nov  1 01:49:53 PM EDT 2023
+test2.txt
+----------------------------------------------------------
+
+   1  -- Function with an Integer Variable
+   2  
+   3  function test2 returns integer;
+   4      b: integer is 9 * 2 + 8;
+   5      csyntax error, unexpected IDENTIFIER, expecting BEGIN_
+     

@@ -11,7 +11,7 @@ for file in test*.txt ; do
     date > output_$file
     echo $file >> output_$file
     echo ---------------------------------------------------------- >> output_$file
-    ../build/compile < $file >> output_$file
+    ../src/compile < $file >> output_$file
 done
 for file in output_test*.txt ; do
     cat $file >> output_summary.txt

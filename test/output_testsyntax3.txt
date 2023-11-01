@@ -1,0 +1,8 @@
+Wed Nov  1 01:49:53 PM EDT 2023
+testsyntax3.txt
+----------------------------------------------------------
+
+   1  -- Error in variable declaration
+   2  
+   3  function main asyntax error, unexpected IDENTIFIER, expecting RETURNS
+     
