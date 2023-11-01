@@ -1,6 +1,6 @@
 #!/bin/bash
 # Compiler Theory and Design
-# Project 1
+# Project 2
 # 23OCT2023
 # Vincent Testagrossa
 
