@@ -68,7 +68,23 @@ extern int yydebug;
     INTEGER = 269,                 /* INTEGER  */
     IS = 270,                      /* IS  */
     REDUCE = 271,                  /* REDUCE  */
-    RETURNS = 272                  /* RETURNS  */
+    RETURNS = 272,                  /* RETURNS  */
+    ARROW = 273,                    /* ARROW  */
+    EXPOP = 274,
+    REMOP = 275,
+    IF = 276,
+    THEN = 277,
+    ENDIF = 278,
+    CASE = 279,
+    ENDCASE = 280,
+    ELSE = 281,
+    OTHERS = 282,
+    REAL = 283,
+    WHEN = 284,
+    OROP = 285,
+    NOTOP = 286,
+    BOOL_LITERAL = 287,
+    REAL_LITERAL = 288
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
