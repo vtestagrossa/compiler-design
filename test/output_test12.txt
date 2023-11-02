@@ -1,4 +1,4 @@
-Thu Nov  2 03:15:09 PM EDT 2023
+Thu Nov  2 03:19:17 PM EDT 2023
 test12.txt
 ----------------------------------------------------------
 
@@ -10,3 +10,6 @@ test12.txt
 syntax error, unexpected OROP, expecting ';'
    6  end;
    7       
+Lexical errors:    0
+Semantic errors:    0
+Syntactic errors:    1

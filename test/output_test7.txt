@@ -1,4 +1,4 @@
-Thu Nov  2 03:15:09 PM EDT 2023
+Thu Nov  2 03:19:17 PM EDT 2023
 test7.txt
 ----------------------------------------------------------
 
@@ -15,3 +15,6 @@ syntax error, unexpected CASE
   10      endcase;  
   11  end;
   12       
+Lexical errors:    0
+Semantic errors:    0
+Syntactic errors:    1

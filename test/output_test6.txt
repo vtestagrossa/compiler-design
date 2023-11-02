@@ -1,4 +1,4 @@
-Thu Nov  2 03:15:09 PM EDT 2023
+Thu Nov  2 03:19:17 PM EDT 2023
 test6.txt
 ----------------------------------------------------------
 
@@ -14,3 +14,6 @@ syntax error, unexpected IF
    9      endif;
   10  end;
   11       
+Lexical errors:    0
+Semantic errors:    0
+Syntactic errors:    1

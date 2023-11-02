@@ -1,4 +1,4 @@
-Thu Nov  2 03:15:09 PM EDT 2023
+Thu Nov  2 03:19:17 PM EDT 2023
 test8.txt
 ----------------------------------------------------------
 
@@ -8,3 +8,6 @@ test8.txt
    4      b: integer is 5 + 1 - 4;
    5      csyntax error, unexpected IDENTIFIER, expecting BEGIN_
      
+Lexical errors:    0
+Semantic errors:    0
+Syntactic errors:    1

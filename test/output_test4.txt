@@ -1,4 +1,4 @@
-Thu Nov  2 03:15:09 PM EDT 2023
+Thu Nov  2 03:19:17 PM EDT 2023
 test4.txt
 ----------------------------------------------------------
 
@@ -13,3 +13,4 @@ test4.txt
    9      endreduce;    
   10  end;
   11       
+Compiled Successfully

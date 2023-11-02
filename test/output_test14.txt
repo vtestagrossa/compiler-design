@@ -1,4 +1,4 @@
-Thu Nov  2 03:15:09 PM EDT 2023
+Thu Nov  2 03:19:17 PM EDT 2023
 test14.txt
 ----------------------------------------------------------
 
@@ -6,3 +6,6 @@ test14.txt
    2  
    3  function main asyntax error, unexpected IDENTIFIER, expecting RETURNS
      
+Lexical errors:    0
+Semantic errors:    0
+Syntactic errors:    1
