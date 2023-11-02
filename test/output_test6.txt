@@ -1,4 +1,4 @@
-Wed Nov  1 01:49:53 PM EDT 2023
+Thu Nov  2 03:15:09 PM EDT 2023
 test6.txt
 ----------------------------------------------------------
 
@@ -7,7 +7,7 @@ test6.txt
    3  function main returns integer;
    4  begin
    5      if 5 + 4 >= 9 then
-syntax error, unexpected invalid token, expecting IDENTIFIER or INT_LITERAL or REDUCE or '('
+syntax error, unexpected IF
    6          6 + 9 * 3;
    7      else
    8          8 - 9 / 7;
