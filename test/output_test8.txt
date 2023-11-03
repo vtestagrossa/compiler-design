@@ -1,4 +1,4 @@
-Fri Nov  3 11:43:03 AM EDT 2023
+Fri Nov  3 11:45:14 AM EDT 2023
 test8.txt
 ----------------------------------------------------------
 
@@ -6,8 +6,9 @@ test8.txt
    2  
    3  function main returns integer;
    4      b: integer is 5 + 1 - 4;
-   5      csyntax error, unexpected IDENTIFIER, expecting BEGIN_
-     
-Lexical errors:    0
-Semantic errors:    0
-Syntactic errors:    1
+   5      c: integer is 2 + 3;
+   6  begin
+   7      b + 1 - c;
+   8  end;
+   9       
+Compiled Successfully

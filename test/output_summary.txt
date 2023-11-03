@@ -1,5 +1,5 @@
 Output Summary
-Fri Nov  3 11:43:03 AM EDT 2023
+Fri Nov  3 11:45:14 AM EDT 2023
 test10.txt
 ----------------------------------------------------------
 
@@ -10,7 +10,7 @@ test10.txt
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Fri Nov  3 11:43:03 AM EDT 2023
+Fri Nov  3 11:45:14 AM EDT 2023
 test11.txt
 ----------------------------------------------------------
 
@@ -25,7 +25,7 @@ syntax error, unexpected REMOP, expecting ';'
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Fri Nov  3 11:43:03 AM EDT 2023
+Fri Nov  3 11:45:14 AM EDT 2023
 test12.txt
 ----------------------------------------------------------
 
@@ -40,7 +40,7 @@ syntax error, unexpected OROP, expecting ';'
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Fri Nov  3 11:43:03 AM EDT 2023
+Fri Nov  3 11:45:14 AM EDT 2023
 test13.txt
 ----------------------------------------------------------
 
@@ -51,7 +51,7 @@ test13.txt
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Fri Nov  3 11:43:03 AM EDT 2023
+Fri Nov  3 11:45:14 AM EDT 2023
 test14.txt
 ----------------------------------------------------------
 
@@ -62,7 +62,7 @@ test14.txt
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Fri Nov  3 11:43:03 AM EDT 2023
+Fri Nov  3 11:45:14 AM EDT 2023
 test1.txt
 ----------------------------------------------------------
 
@@ -74,7 +74,7 @@ test1.txt
    6  end;
    7       
 Compiled Successfully
-Fri Nov  3 11:43:03 AM EDT 2023
+Fri Nov  3 11:45:14 AM EDT 2023
 test2.txt
 ----------------------------------------------------------
 
@@ -82,12 +82,13 @@ test2.txt
    2  
    3  function test2 returns integer;
    4      b: integer is 9 * 2 + 8;
-   5      csyntax error, unexpected IDENTIFIER, expecting BEGIN_
-     
-Lexical errors:    0
-Semantic errors:    0
-Syntactic errors:    1
-Fri Nov  3 11:43:03 AM EDT 2023
+   5      c: integer is 10;
+   6  begin
+   7      b + 2 * 8;    
+   8  end;
+   9       
+Compiled Successfully
+Fri Nov  3 11:45:14 AM EDT 2023
 test3.txt
 ----------------------------------------------------------
 
@@ -100,7 +101,7 @@ test3.txt
    7  end;
    8       
 Compiled Successfully
-Fri Nov  3 11:43:03 AM EDT 2023
+Fri Nov  3 11:45:14 AM EDT 2023
 test4.txt
 ----------------------------------------------------------
 
@@ -116,7 +117,7 @@ test4.txt
   10  end;
   11       
 Compiled Successfully
-Fri Nov  3 11:43:03 AM EDT 2023
+Fri Nov  3 11:45:14 AM EDT 2023
 test5.txt
 ----------------------------------------------------------
 
@@ -129,7 +130,7 @@ test5.txt
    7  end;
    8       
 Compiled Successfully
-Fri Nov  3 11:43:03 AM EDT 2023
+Fri Nov  3 11:45:14 AM EDT 2023
 test6.txt
 ----------------------------------------------------------
 
@@ -145,7 +146,7 @@ test6.txt
   10  end;
   11       
 Compiled Successfully
-Fri Nov  3 11:43:03 AM EDT 2023
+Fri Nov  3 11:45:14 AM EDT 2023
 test7.txt
 ----------------------------------------------------------
 
@@ -162,7 +163,7 @@ test7.txt
   11  end;
   12       
 Compiled Successfully
-Fri Nov  3 11:43:03 AM EDT 2023
+Fri Nov  3 11:45:14 AM EDT 2023
 test8.txt
 ----------------------------------------------------------
 
@@ -170,12 +171,13 @@ test8.txt
    2  
    3  function main returns integer;
    4      b: integer is 5 + 1 - 4;
-   5      csyntax error, unexpected IDENTIFIER, expecting BEGIN_
-     
-Lexical errors:    0
-Semantic errors:    0
-Syntactic errors:    1
-Fri Nov  3 11:43:03 AM EDT 2023
+   5      c: integer is 2 + 3;
+   6  begin
+   7      b + 1 - c;
+   8  end;
+   9       
+Compiled Successfully
+Fri Nov  3 11:45:14 AM EDT 2023
 test9.txt
 ----------------------------------------------------------
 
@@ -186,7 +188,7 @@ test9.txt
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Fri Nov  3 11:43:03 AM EDT 2023
+Fri Nov  3 11:45:14 AM EDT 2023
 testsyntax1.txt
 ----------------------------------------------------------
 
@@ -201,7 +203,7 @@ syntax error, unexpected INT_LITERAL, expecting ';'
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Fri Nov  3 11:43:03 AM EDT 2023
+Fri Nov  3 11:45:14 AM EDT 2023
 testsyntax2.txt
 ----------------------------------------------------------
 
@@ -212,7 +214,7 @@ testsyntax2.txt
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Fri Nov  3 11:43:03 AM EDT 2023
+Fri Nov  3 11:45:14 AM EDT 2023
 testsyntax3.txt
 ----------------------------------------------------------
 
@@ -223,7 +225,7 @@ testsyntax3.txt
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Fri Nov  3 11:43:03 AM EDT 2023
+Fri Nov  3 11:45:14 AM EDT 2023
 testsyntax4.txt
 ----------------------------------------------------------
 
@@ -234,7 +236,7 @@ testsyntax4.txt
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Fri Nov  3 11:43:03 AM EDT 2023
+Fri Nov  3 11:45:14 AM EDT 2023
 testsyntax5.txt
 ----------------------------------------------------------
 

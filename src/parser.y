@@ -34,7 +34,7 @@ function_header:
 	FUNCTION IDENTIFIER RETURNS type ';' ;
 
 optional_variable:
-	variable |
+	optional_variable variable |
 	;
 
 variable:
