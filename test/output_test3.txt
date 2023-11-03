@@ -1,13 +1,11 @@
-Fri Nov  3 11:45:14 AM EDT 2023
+Fri Nov  3 11:49:01 AM EDT 2023
 test3.txt
 ----------------------------------------------------------
 
    1  -- Function with an Boolean Variable
    2  
-   3  function test3 returns boolean;
-   4      b: boolean is 5 < 2;
-   5  begin
-   6      b and 2 < 8 + 1 * 7;    
-   7  end;
-   8       
-Compiled Successfully
+   3  function test3 returnssyntax error, unexpected RETURNS, expecting IDENTIFIER
+     
+Lexical errors:    0
+Semantic errors:    0
+Syntactic errors:    1

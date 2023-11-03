@@ -1,11 +1,28 @@
-Fri Nov  3 11:45:14 AM EDT 2023
+Fri Nov  3 11:49:01 AM EDT 2023
 test14.txt
 ----------------------------------------------------------
 
    1  // Comprehensive test with nested case
    2  
-   3  function main asyntax error, unexpected IDENTIFIER, expecting RETURNS
-     
+   3  function main a: integer, b: real returns real;
+   4      c: integer is 8;
+   5      d: real is 7.E2;
+   6  begin
+   7      case a is
+   8           when 1 => a * 2 / d ** 2;
+syntax error, unexpected EXPOP, expecting ';'
+   9           when 2 => a + 5.E+2 - b;
+  10           when 3 =>
+  11               case d is
+  12                   when 1 => a rem 2;
+syntax error, unexpected REMOP, expecting ';'
+  13                   others => 9.1E-1;
+  14               endcase;
+  15           when 4 => a / 2 - c;
+  16           others => a + 4.7 * b;
+  17      endcase;
+  18  end;
+  19       
 Lexical errors:    0
 Semantic errors:    0
-Syntactic errors:    1
+Syntactic errors:    2

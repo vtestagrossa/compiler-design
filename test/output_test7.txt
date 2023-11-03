@@ -1,17 +1,11 @@
-Fri Nov  3 11:45:14 AM EDT 2023
+Fri Nov  3 11:49:01 AM EDT 2023
 test7.txt
 ----------------------------------------------------------
 
    1  // Case selection
    2  
-   3  function main returns integer;
-   4      a: integer is 4 + 2;
-   5  begin
-   6      case a is
-   7          when 1 => 3;
-   8          when 2 => (3 + 5 - 5 - 4) * 2;
-   9          others => 4;
-  10      endcase;  
-  11  end;
-  12       
-Compiled Successfully
+   3  function main returnssyntax error, unexpected RETURNS, expecting IDENTIFIER
+     
+Lexical errors:    0
+Semantic errors:    0
+Syntactic errors:    1

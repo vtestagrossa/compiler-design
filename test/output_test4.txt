@@ -1,16 +1,11 @@
-Fri Nov  3 11:45:14 AM EDT 2023
+Fri Nov  3 11:49:01 AM EDT 2023
 test4.txt
 ----------------------------------------------------------
 
    1  -- Function with a Reduction
    2  
-   3  function test4 returns integer;
-   4  begin
-   5      reduce *
-   6           2 + 8;
-   7           6;
-   8           3;
-   9      endreduce;    
-  10  end;
-  11       
-Compiled Successfully
+   3  function test4 returnssyntax error, unexpected RETURNS, expecting IDENTIFIER
+     
+Lexical errors:    0
+Semantic errors:    0
+Syntactic errors:    1

@@ -31,7 +31,18 @@ function:
 	function_header optional_variable body ;
 	
 function_header:	
-	FUNCTION IDENTIFIER RETURNS type ';' ;
+	FUNCTION IDENTIFIER parameters RETURNS type ';' ;
+
+parameters:
+	parameter optional_parameter;
+
+parameter:
+	IDENTIFIER ':' type;
+
+optional_parameter:
+	optional_parameter ',' parameter |
+	;
+
 
 optional_variable:
 	optional_variable variable |

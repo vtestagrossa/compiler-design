@@ -1,10 +1,11 @@
-Fri Nov  3 11:45:14 AM EDT 2023
+Fri Nov  3 11:49:01 AM EDT 2023
 testsyntax3.txt
 ----------------------------------------------------------
 
    1  -- Error in variable declaration
    2  
-   3  function main asyntax error, unexpected IDENTIFIER, expecting RETURNS
+   3  function main a: integer returns integer;
+   4      b integersyntax error, unexpected INTEGER, expecting ':'
      
 Lexical errors:    0
 Semantic errors:    0

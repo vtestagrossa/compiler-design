@@ -1,13 +1,11 @@
-Fri Nov  3 11:45:14 AM EDT 2023
+Fri Nov  3 11:49:01 AM EDT 2023
 test5.txt
 ----------------------------------------------------------
 
    1  -- Function with a Real Variable and Boolean and Real Literals
    2  
-   3  function main returns boolean;
-   4      r: real is 5.7;
-   5  begin
-   6      true and 2 < 8.E+1 + 1.7E-2 * 7.3E2;    
-   7  end;
-   8       
-Compiled Successfully
+   3  function main returnssyntax error, unexpected RETURNS, expecting IDENTIFIER
+     
+Lexical errors:    0
+Semantic errors:    0
+Syntactic errors:    1

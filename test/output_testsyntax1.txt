@@ -1,15 +1,11 @@
-Fri Nov  3 11:45:14 AM EDT 2023
+Fri Nov  3 11:49:01 AM EDT 2023
 testsyntax1.txt
 ----------------------------------------------------------
 
    1  -- Missing operator in expression
    2  
-   3  function test5 returns integer;
-   4  begin
-   5      8 and 2 9 * 3;    
-syntax error, unexpected INT_LITERAL, expecting ';'
-   6  end;
-   7       
+   3  function test5 returnssyntax error, unexpected RETURNS, expecting IDENTIFIER
+     
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
