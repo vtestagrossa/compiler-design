@@ -33,7 +33,7 @@ Grammar
    14          | IF expression THEN statement_ ELSE statement_ ENDIF
    15          | CASE expression IS optional_case OTHERS ARROW statement_ ENDCASE
 
-   16 optional_case: WHEN INT_LITERAL ARROW statement_
+   16 optional_case: optional_case WHEN INT_LITERAL ARROW statement_
    17              | ε
 
    18 operator: ADDOP
@@ -132,7 +132,7 @@ Nonterminals, with rules where they appear
         on right: 10
     optional_case (47)
         on left: 16 17
-        on right: 15
+        on right: 15 16
     operator (48)
         on left: 18 19
         on right: 13
@@ -691,11 +691,9 @@ State 52
 
    15 statement: CASE expression IS • optional_case OTHERS ARROW statement_ ENDCASE
 
-    WHEN  shift, and go to state 62
-
     $default  reduce using rule 17 (optional_case)
 
-    optional_case  go to state 63
+    optional_case  go to state 62
 
 
 State 53
@@ -767,24 +765,19 @@ State 61
 
    14 statement: IF expression THEN statement_ • ELSE statement_ ENDIF
 
-    ELSE  shift, and go to state 64
+    ELSE  shift, and go to state 63
 
 
 State 62
 
-   16 optional_case: WHEN • INT_LITERAL ARROW statement_
+   15 statement: CASE expression IS optional_case • OTHERS ARROW statement_ ENDCASE
+   16 optional_case: optional_case • WHEN INT_LITERAL ARROW statement_
 
-    INT_LITERAL  shift, and go to state 65
+    OTHERS  shift, and go to state 64
+    WHEN    shift, and go to state 65
 
 
 State 63
-
-   15 statement: CASE expression IS optional_case • OTHERS ARROW statement_ ENDCASE
-
-    OTHERS  shift, and go to state 66
-
-
-State 64
 
    14 statement: IF expression THEN statement_ ELSE • statement_ ENDIF
 
@@ -798,60 +791,37 @@ State 64
     CASE          shift, and go to state 25
     '('           shift, and go to state 26
 
-    statement_  go to state 67
+    statement_  go to state 66
     statement   go to state 28
     expression  go to state 29
     relation    go to state 30
     term        go to state 31
     factor      go to state 32
     primary     go to state 33
+
+
+State 64
+
+   15 statement: CASE expression IS optional_case OTHERS • ARROW statement_ ENDCASE
+
+    ARROW  shift, and go to state 67
 
 
 State 65
 
-   16 optional_case: WHEN INT_LITERAL • ARROW statement_
+   16 optional_case: optional_case WHEN • INT_LITERAL ARROW statement_
 
-    ARROW  shift, and go to state 68
+    INT_LITERAL  shift, and go to state 68
 
 
 State 66
 
-   15 statement: CASE expression IS optional_case OTHERS • ARROW statement_ ENDCASE
+   14 statement: IF expression THEN statement_ ELSE statement_ • ENDIF
 
-    ARROW  shift, and go to state 69
+    ENDIF  shift, and go to state 69
 
 
 State 67
-
-   14 statement: IF expression THEN statement_ ELSE statement_ • ENDIF
-
-    ENDIF  shift, and go to state 70
-
-
-State 68
-
-   16 optional_case: WHEN INT_LITERAL ARROW • statement_
-
-    error         shift, and go to state 18
-    IDENTIFIER    shift, and go to state 19
-    INT_LITERAL   shift, and go to state 20
-    REAL_LITERAL  shift, and go to state 21
-    BOOL_LITERAL  shift, and go to state 22
-    REDUCE        shift, and go to state 23
-    IF            shift, and go to state 24
-    CASE          shift, and go to state 25
-    '('           shift, and go to state 26
-
-    statement_  go to state 71
-    statement   go to state 28
-    expression  go to state 29
-    relation    go to state 30
-    term        go to state 31
-    factor      go to state 32
-    primary     go to state 33
-
-
-State 69
 
    15 statement: CASE expression IS optional_case OTHERS ARROW • statement_ ENDCASE
 
@@ -865,7 +835,7 @@ State 69
     CASE          shift, and go to state 25
     '('           shift, and go to state 26
 
-    statement_  go to state 72
+    statement_  go to state 70
     statement   go to state 28
     expression  go to state 29
     relation    go to state 30
@@ -874,29 +844,59 @@ State 69
     primary     go to state 33
 
 
-State 70
+State 68
+
+   16 optional_case: optional_case WHEN INT_LITERAL • ARROW statement_
+
+    ARROW  shift, and go to state 71
+
+
+State 69
 
    14 statement: IF expression THEN statement_ ELSE statement_ ENDIF •
 
     $default  reduce using rule 14 (statement)
 
 
+State 70
+
+   15 statement: CASE expression IS optional_case OTHERS ARROW statement_ • ENDCASE
+
+    ENDCASE  shift, and go to state 72
+
+
 State 71
 
-   16 optional_case: WHEN INT_LITERAL ARROW statement_ •
+   16 optional_case: optional_case WHEN INT_LITERAL ARROW • statement_
 
-    $default  reduce using rule 16 (optional_case)
+    error         shift, and go to state 18
+    IDENTIFIER    shift, and go to state 19
+    INT_LITERAL   shift, and go to state 20
+    REAL_LITERAL  shift, and go to state 21
+    BOOL_LITERAL  shift, and go to state 22
+    REDUCE        shift, and go to state 23
+    IF            shift, and go to state 24
+    CASE          shift, and go to state 25
+    '('           shift, and go to state 26
+
+    statement_  go to state 73
+    statement   go to state 28
+    expression  go to state 29
+    relation    go to state 30
+    term        go to state 31
+    factor      go to state 32
+    primary     go to state 33
 
 
 State 72
 
-   15 statement: CASE expression IS optional_case OTHERS ARROW statement_ • ENDCASE
+   15 statement: CASE expression IS optional_case OTHERS ARROW statement_ ENDCASE •
 
-    ENDCASE  shift, and go to state 73
+    $default  reduce using rule 15 (statement)
 
 
 State 73
 
-   15 statement: CASE expression IS optional_case OTHERS ARROW statement_ ENDCASE •
+   16 optional_case: optional_case WHEN INT_LITERAL ARROW statement_ •
 
-    $default  reduce using rule 15 (statement)
+    $default  reduce using rule 16 (optional_case)

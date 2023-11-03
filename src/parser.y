@@ -59,7 +59,7 @@ statement:
 	CASE expression IS optional_case OTHERS ARROW statement_ ENDCASE;
 
 optional_case:
-	WHEN INT_LITERAL ARROW statement_ |
+	optional_case WHEN INT_LITERAL ARROW statement_ |
 	;
 
 operator:

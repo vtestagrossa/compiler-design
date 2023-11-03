@@ -1,4 +1,4 @@
-Fri Nov  3 11:36:24 AM EDT 2023
+Fri Nov  3 11:43:03 AM EDT 2023
 test7.txt
 ----------------------------------------------------------
 
@@ -10,11 +10,8 @@ test7.txt
    6      case a is
    7          when 1 => 3;
    8          when 2 => (3 + 5 - 5 - 4) * 2;
-syntax error, unexpected WHEN, expecting OTHERS
    9          others => 4;
   10      endcase;  
   11  end;
   12       
-Lexical errors:    0
-Semantic errors:    0
-Syntactic errors:    1
+Compiled Successfully
