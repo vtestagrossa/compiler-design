@@ -54,7 +54,13 @@ statement_:
 	
 statement:
 	expression |
-	REDUCE operator reductions ENDREDUCE ;
+	REDUCE operator reductions ENDREDUCE |
+	IF expression THEN statement_ ELSE statement_ ENDIF |
+	CASE expression IS optional_case OTHERS ARROW statement_ ENDCASE;
+
+optional_case:
+	WHEN INT_LITERAL ARROW statement_ |
+	;
 
 operator:
 	ADDOP |

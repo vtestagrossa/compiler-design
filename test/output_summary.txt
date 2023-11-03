@@ -1,5 +1,5 @@
 Output Summary
-Thu Nov  2 03:19:17 PM EDT 2023
+Fri Nov  3 11:36:24 AM EDT 2023
 test10.txt
 ----------------------------------------------------------
 
@@ -10,7 +10,7 @@ test10.txt
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Thu Nov  2 03:19:17 PM EDT 2023
+Fri Nov  3 11:36:24 AM EDT 2023
 test11.txt
 ----------------------------------------------------------
 
@@ -25,7 +25,7 @@ syntax error, unexpected REMOP, expecting ';'
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Thu Nov  2 03:19:17 PM EDT 2023
+Fri Nov  3 11:36:24 AM EDT 2023
 test12.txt
 ----------------------------------------------------------
 
@@ -40,7 +40,7 @@ syntax error, unexpected OROP, expecting ';'
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Thu Nov  2 03:19:17 PM EDT 2023
+Fri Nov  3 11:36:24 AM EDT 2023
 test13.txt
 ----------------------------------------------------------
 
@@ -51,7 +51,7 @@ test13.txt
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Thu Nov  2 03:19:17 PM EDT 2023
+Fri Nov  3 11:36:24 AM EDT 2023
 test14.txt
 ----------------------------------------------------------
 
@@ -62,7 +62,7 @@ test14.txt
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Thu Nov  2 03:19:17 PM EDT 2023
+Fri Nov  3 11:36:24 AM EDT 2023
 test1.txt
 ----------------------------------------------------------
 
@@ -74,7 +74,7 @@ test1.txt
    6  end;
    7       
 Compiled Successfully
-Thu Nov  2 03:19:17 PM EDT 2023
+Fri Nov  3 11:36:24 AM EDT 2023
 test2.txt
 ----------------------------------------------------------
 
@@ -87,7 +87,7 @@ test2.txt
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Thu Nov  2 03:19:17 PM EDT 2023
+Fri Nov  3 11:36:24 AM EDT 2023
 test3.txt
 ----------------------------------------------------------
 
@@ -100,7 +100,7 @@ test3.txt
    7  end;
    8       
 Compiled Successfully
-Thu Nov  2 03:19:17 PM EDT 2023
+Fri Nov  3 11:36:24 AM EDT 2023
 test4.txt
 ----------------------------------------------------------
 
@@ -116,7 +116,7 @@ test4.txt
   10  end;
   11       
 Compiled Successfully
-Thu Nov  2 03:19:17 PM EDT 2023
+Fri Nov  3 11:36:24 AM EDT 2023
 test5.txt
 ----------------------------------------------------------
 
@@ -129,7 +129,7 @@ test5.txt
    7  end;
    8       
 Compiled Successfully
-Thu Nov  2 03:19:17 PM EDT 2023
+Fri Nov  3 11:36:24 AM EDT 2023
 test6.txt
 ----------------------------------------------------------
 
@@ -138,17 +138,14 @@ test6.txt
    3  function main returns integer;
    4  begin
    5      if 5 + 4 >= 9 then
-syntax error, unexpected IF
    6          6 + 9 * 3;
    7      else
    8          8 - 9 / 7;
    9      endif;
   10  end;
   11       
-Lexical errors:    0
-Semantic errors:    0
-Syntactic errors:    1
-Thu Nov  2 03:19:17 PM EDT 2023
+Compiled Successfully
+Fri Nov  3 11:36:24 AM EDT 2023
 test7.txt
 ----------------------------------------------------------
 
@@ -158,9 +155,9 @@ test7.txt
    4      a: integer is 4 + 2;
    5  begin
    6      case a is
-syntax error, unexpected CASE
    7          when 1 => 3;
    8          when 2 => (3 + 5 - 5 - 4) * 2;
+syntax error, unexpected WHEN, expecting OTHERS
    9          others => 4;
   10      endcase;  
   11  end;
@@ -168,7 +165,7 @@ syntax error, unexpected CASE
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Thu Nov  2 03:19:17 PM EDT 2023
+Fri Nov  3 11:36:24 AM EDT 2023
 test8.txt
 ----------------------------------------------------------
 
@@ -181,7 +178,7 @@ test8.txt
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Thu Nov  2 03:19:17 PM EDT 2023
+Fri Nov  3 11:36:24 AM EDT 2023
 test9.txt
 ----------------------------------------------------------
 
@@ -192,7 +189,7 @@ test9.txt
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Thu Nov  2 03:19:17 PM EDT 2023
+Fri Nov  3 11:36:24 AM EDT 2023
 testsyntax1.txt
 ----------------------------------------------------------
 
@@ -207,7 +204,7 @@ syntax error, unexpected INT_LITERAL, expecting ';'
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Thu Nov  2 03:19:17 PM EDT 2023
+Fri Nov  3 11:36:24 AM EDT 2023
 testsyntax2.txt
 ----------------------------------------------------------
 
@@ -218,7 +215,7 @@ testsyntax2.txt
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Thu Nov  2 03:19:17 PM EDT 2023
+Fri Nov  3 11:36:24 AM EDT 2023
 testsyntax3.txt
 ----------------------------------------------------------
 
@@ -229,7 +226,7 @@ testsyntax3.txt
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Thu Nov  2 03:19:17 PM EDT 2023
+Fri Nov  3 11:36:24 AM EDT 2023
 testsyntax4.txt
 ----------------------------------------------------------
 
@@ -240,7 +237,7 @@ testsyntax4.txt
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Thu Nov  2 03:19:17 PM EDT 2023
+Fri Nov  3 11:36:24 AM EDT 2023
 testsyntax5.txt
 ----------------------------------------------------------
 
