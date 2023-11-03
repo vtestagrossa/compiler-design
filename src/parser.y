@@ -34,7 +34,8 @@ function_header:
 	FUNCTION IDENTIFIER parameters RETURNS type ';' ;
 
 parameters:
-	parameter optional_parameter;
+	parameter optional_parameter |
+	;
 
 parameter:
 	IDENTIFIER ':' type;
