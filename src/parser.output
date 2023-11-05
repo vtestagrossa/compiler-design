@@ -36,71 +36,72 @@ Grammar
    22          | CASE expression IS optional_case OTHERS ARROW statement_ ENDCASE
 
    23 optional_case: optional_case WHEN INT_LITERAL ARROW statement_
-   24              | ε
+   24              | error ';'
+   25              | ε
 
-   25 operator: ADDOP
-   26         | MULOP
-   27         | REMOP
-   28         | EXPOP
-   29         | OROP
-   30         | ANDOP
+   26 operator: ADDOP
+   27         | MULOP
+   28         | REMOP
+   29         | EXPOP
+   30         | OROP
+   31         | ANDOP
 
-   31 reductions: reductions statement_
-   32           | ε
+   32 reductions: reductions statement_
+   33           | ε
 
-   33 expression: or_expression
+   34 expression: or_expression
 
-   34 or_expression: or_expression OROP and_expression
-   35              | and_expression
+   35 or_expression: or_expression OROP and_expression
+   36              | and_expression
 
-   36 and_expression: and_expression ANDOP not_expression
-   37               | not_expression
+   37 and_expression: and_expression ANDOP not_expression
+   38               | not_expression
 
-   38 not_expression: NOTOP not_expression
-   39               | relation
+   39 not_expression: NOTOP not_expression
+   40               | relation
 
-   40 relation: relation RELOP term
-   41         | term
+   41 relation: relation RELOP term
+   42         | term
 
-   42 term: term ADDOP factor
-   43     | factor
+   43 term: term ADDOP factor
+   44     | factor
 
-   44 factor: factor MULOP exponent
-   45       | factor REMOP exponent
-   46       | exponent
+   45 factor: factor MULOP exponent
+   46       | factor REMOP exponent
+   47       | exponent
 
-   47 exponent: exponent EXPOP primary
-   48         | primary
+   48 exponent: exponent EXPOP primary
+   49         | primary
 
-   49 primary: '(' expression ')'
-   50        | INT_LITERAL
-   51        | REAL_LITERAL
-   52        | BOOL_LITERAL
-   53        | IDENTIFIER
+   50 primary: '(' expression ')'
+   51        | INT_LITERAL
+   52        | REAL_LITERAL
+   53        | BOOL_LITERAL
+   54        | IDENTIFIER
 
 
 Terminals, with rules where they appear
 
     $end (0) 0
-    '(' (40) 49
-    ')' (41) 49
+    '(' (40) 50
+    ')' (41) 50
     ',' (44) 7
     ':' (58) 6 11
-    ';' (59) 2 3 12 16 17 18
-    error (256) 3 12 18
-    IDENTIFIER (258) 2 6 11 53
-    INT_LITERAL (259) 23 50
-    REAL_LITERAL (260) 51
-    BOOL_LITERAL (261) 52
-    ADDOP (262) 25 42
-    MULOP (263) 26 44
-    RELOP (264) 40
-    ANDOP (265) 30 36
-    OROP (266) 29 34
-    NOTOP (267) 38
+    ';' (59) 2 3 12 16 17 18 24
+    error (256) 3 12 18 24
+    IDENTIFIER (258) 2 6 11 54
+    INT_LITERAL (259) 23 51
+    REAL_LITERAL (260) 52
+    BOOL_LITERAL (261) 53
+    ADDOP (262) 26 43
+    MULOP (263) 27 45
+    RELOP (264) 41
+    ANDOP (265) 31 37
+    OROP (266) 30 35
+    NOTOP (267) 39
     ARROW (268) 22 23
-    EXPOP (269) 28 47
-    REMOP (270) 27 45
+    EXPOP (269) 29 48
+    REMOP (270) 28 46
     BEGIN_ (271) 16
     BOOLEAN (272) 14
     END (273) 16
@@ -154,46 +155,46 @@ Nonterminals, with rules where they appear
         on right: 1
     statement_ (49)
         on left: 17 18
-        on right: 11 16 21 22 23 31
+        on right: 11 16 21 22 23 32
     statement (50)
         on left: 19 20 21 22
         on right: 17
     optional_case (51)
-        on left: 23 24
+        on left: 23 24 25
         on right: 22 23
     operator (52)
-        on left: 25 26 27 28 29 30
+        on left: 26 27 28 29 30 31
         on right: 20
     reductions (53)
-        on left: 31 32
-        on right: 20 31
+        on left: 32 33
+        on right: 20 32
     expression (54)
-        on left: 33
-        on right: 19 21 22 49
+        on left: 34
+        on right: 19 21 22 50
     or_expression (55)
-        on left: 34 35
-        on right: 33 34
+        on left: 35 36
+        on right: 34 35
     and_expression (56)
-        on left: 36 37
-        on right: 34 35 36
+        on left: 37 38
+        on right: 35 36 37
     not_expression (57)
-        on left: 38 39
-        on right: 36 37 38
+        on left: 39 40
+        on right: 37 38 39
     relation (58)
-        on left: 40 41
-        on right: 39 40
+        on left: 41 42
+        on right: 40 41
     term (59)
-        on left: 42 43
-        on right: 40 41 42
+        on left: 43 44
+        on right: 41 42 43
     factor (60)
-        on left: 44 45 46
-        on right: 42 43 44 45
+        on left: 45 46 47
+        on right: 43 44 45 46
     exponent (61)
-        on left: 47 48
-        on right: 44 45 46 47
+        on left: 48 49
+        on right: 45 46 47 48
     primary (62)
-        on left: 49 50 51 52 53
-        on right: 47 48
+        on left: 50 51 52 53 54
+        on right: 48 49
 
 
 State 0
@@ -414,35 +415,35 @@ State 22
 
 State 23
 
-   53 primary: IDENTIFIER •
+   54 primary: IDENTIFIER •
 
-    $default  reduce using rule 53 (primary)
+    $default  reduce using rule 54 (primary)
 
 
 State 24
 
-   50 primary: INT_LITERAL •
-
-    $default  reduce using rule 50 (primary)
-
-
-State 25
-
-   51 primary: REAL_LITERAL •
+   51 primary: INT_LITERAL •
 
     $default  reduce using rule 51 (primary)
 
 
-State 26
+State 25
 
-   52 primary: BOOL_LITERAL •
+   52 primary: REAL_LITERAL •
 
     $default  reduce using rule 52 (primary)
 
 
+State 26
+
+   53 primary: BOOL_LITERAL •
+
+    $default  reduce using rule 53 (primary)
+
+
 State 27
 
-   38 not_expression: NOTOP • not_expression
+   39 not_expression: NOTOP • not_expression
 
     IDENTIFIER    shift, and go to state 23
     INT_LITERAL   shift, and go to state 24
@@ -519,7 +520,7 @@ State 30
 
 State 31
 
-   49 primary: '(' • expression ')'
+   50 primary: '(' • expression ')'
 
     IDENTIFIER    shift, and go to state 23
     INT_LITERAL   shift, and go to state 24
@@ -562,78 +563,78 @@ State 34
 
 State 35
 
-   33 expression: or_expression •
-   34 or_expression: or_expression • OROP and_expression
+   34 expression: or_expression •
+   35 or_expression: or_expression • OROP and_expression
 
     OROP  shift, and go to state 64
 
-    $default  reduce using rule 33 (expression)
+    $default  reduce using rule 34 (expression)
 
 
 State 36
 
-   35 or_expression: and_expression •
-   36 and_expression: and_expression • ANDOP not_expression
+   36 or_expression: and_expression •
+   37 and_expression: and_expression • ANDOP not_expression
 
     ANDOP  shift, and go to state 65
 
-    $default  reduce using rule 35 (or_expression)
+    $default  reduce using rule 36 (or_expression)
 
 
 State 37
 
-   37 and_expression: not_expression •
+   38 and_expression: not_expression •
 
-    $default  reduce using rule 37 (and_expression)
+    $default  reduce using rule 38 (and_expression)
 
 
 State 38
 
-   39 not_expression: relation •
-   40 relation: relation • RELOP term
+   40 not_expression: relation •
+   41 relation: relation • RELOP term
 
     RELOP  shift, and go to state 66
 
-    $default  reduce using rule 39 (not_expression)
+    $default  reduce using rule 40 (not_expression)
 
 
 State 39
 
-   41 relation: term •
-   42 term: term • ADDOP factor
+   42 relation: term •
+   43 term: term • ADDOP factor
 
     ADDOP  shift, and go to state 67
 
-    $default  reduce using rule 41 (relation)
+    $default  reduce using rule 42 (relation)
 
 
 State 40
 
-   43 term: factor •
-   44 factor: factor • MULOP exponent
-   45       | factor • REMOP exponent
+   44 term: factor •
+   45 factor: factor • MULOP exponent
+   46       | factor • REMOP exponent
 
     MULOP  shift, and go to state 68
     REMOP  shift, and go to state 69
 
-    $default  reduce using rule 43 (term)
+    $default  reduce using rule 44 (term)
 
 
 State 41
 
-   46 factor: exponent •
-   47 exponent: exponent • EXPOP primary
+   47 factor: exponent •
+   48 exponent: exponent • EXPOP primary
 
     EXPOP  shift, and go to state 70
 
-    $default  reduce using rule 46 (factor)
+    $default  reduce using rule 47 (factor)
 
 
 State 42
 
-   48 exponent: primary •
+   49 exponent: primary •
 
-    $default  reduce using rule 48 (exponent)
+    $default  reduce using rule 49 (exponent)
 
 
 State 43
@@ -696,58 +697,58 @@ State 50
 
 State 51
 
-   38 not_expression: NOTOP not_expression •
+   39 not_expression: NOTOP not_expression •
 
-    $default  reduce using rule 38 (not_expression)
+    $default  reduce using rule 39 (not_expression)
 
 
 State 52
 
-   25 operator: ADDOP •
-
-    $default  reduce using rule 25 (operator)
-
-
-State 53
-
-   26 operator: MULOP •
+   26 operator: ADDOP •
 
     $default  reduce using rule 26 (operator)
 
 
+State 53
+
+   27 operator: MULOP •
+
+    $default  reduce using rule 27 (operator)
+
+
 State 54
 
-   30 operator: ANDOP •
+   31 operator: ANDOP •
 
-    $default  reduce using rule 30 (operator)
+    $default  reduce using rule 31 (operator)
 
 
 State 55
 
-   29 operator: OROP •
+   30 operator: OROP •
 
-    $default  reduce using rule 29 (operator)
+    $default  reduce using rule 30 (operator)
 
 
 State 56
 
-   28 operator: EXPOP •
+   29 operator: EXPOP •
 
-    $default  reduce using rule 28 (operator)
+    $default  reduce using rule 29 (operator)
 
 
 State 57
 
-   27 operator: REMOP •
+   28 operator: REMOP •
 
-    $default  reduce using rule 27 (operator)
+    $default  reduce using rule 28 (operator)
 
 
 State 58
 
    20 statement: REDUCE operator • reductions ENDREDUCE
 
-    $default  reduce using rule 32 (reductions)
+    $default  reduce using rule 33 (reductions)
 
     reductions  go to state 74
 
@@ -768,7 +769,7 @@ State 60
 
 State 61
 
-   49 primary: '(' expression • ')'
+   50 primary: '(' expression • ')'
 
     ')'  shift, and go to state 77
 
@@ -789,7 +790,7 @@ State 63
 
 State 64
 
-   34 or_expression: or_expression OROP • and_expression
+   35 or_expression: or_expression OROP • and_expression
 
     IDENTIFIER    shift, and go to state 23
     INT_LITERAL   shift, and go to state 24
@@ -809,7 +810,7 @@ State 64
 
 State 65
 
-   36 and_expression: and_expression ANDOP • not_expression
+   37 and_expression: and_expression ANDOP • not_expression
 
     IDENTIFIER    shift, and go to state 23
     INT_LITERAL   shift, and go to state 24
@@ -828,7 +829,7 @@ State 65
 
 State 66
 
-   40 relation: relation RELOP • term
+   41 relation: relation RELOP • term
 
     IDENTIFIER    shift, and go to state 23
     INT_LITERAL   shift, and go to state 24
@@ -844,7 +845,7 @@ State 66
 
 State 67
 
-   42 term: term ADDOP • factor
+   43 term: term ADDOP • factor
 
     IDENTIFIER    shift, and go to state 23
     INT_LITERAL   shift, and go to state 24
@@ -859,7 +860,7 @@ State 67
 
 State 68
 
-   44 factor: factor MULOP • exponent
+   45 factor: factor MULOP • exponent
 
     IDENTIFIER    shift, and go to state 23
     INT_LITERAL   shift, and go to state 24
@@ -873,7 +874,7 @@ State 68
 
 State 69
 
-   45 factor: factor REMOP • exponent
+   46 factor: factor REMOP • exponent
 
     IDENTIFIER    shift, and go to state 23
     INT_LITERAL   shift, and go to state 24
@@ -887,7 +888,7 @@ State 69
 
 State 70
 
-   47 exponent: exponent EXPOP • primary
+   48 exponent: exponent EXPOP • primary
 
     IDENTIFIER    shift, and go to state 23
     INT_LITERAL   shift, and go to state 24
@@ -943,7 +944,7 @@ State 73
 State 74
 
    20 statement: REDUCE operator reductions • ENDREDUCE
-   31 reductions: reductions • statement_
+   32 reductions: reductions • statement_
 
     error         shift, and go to state 22
     IDENTIFIER    shift, and go to state 23
@@ -1002,16 +1003,19 @@ State 76
 
    22 statement: CASE expression IS • optional_case OTHERS ARROW statement_ ENDCASE
 
-    $default  reduce using rule 24 (optional_case)
+    error  shift, and go to state 90
 
-    optional_case  go to state 90
+    OTHERS  reduce using rule 25 (optional_case)
+    WHEN    reduce using rule 25 (optional_case)
+
+    optional_case  go to state 91
 
 
 State 77
 
-   49 primary: '(' expression ')' •
+   50 primary: '(' expression ')' •
 
-    $default  reduce using rule 49 (primary)
+    $default  reduce using rule 50 (primary)
 
 
 State 78
@@ -1023,68 +1027,68 @@ State 78
 
 State 79
 
-   34 or_expression: or_expression OROP and_expression •
-   36 and_expression: and_expression • ANDOP not_expression
+   35 or_expression: or_expression OROP and_expression •
+   37 and_expression: and_expression • ANDOP not_expression
 
     ANDOP  shift, and go to state 65
 
-    $default  reduce using rule 34 (or_expression)
+    $default  reduce using rule 35 (or_expression)
 
 
 State 80
 
-   36 and_expression: and_expression ANDOP not_expression •
+   37 and_expression: and_expression ANDOP not_expression •
 
-    $default  reduce using rule 36 (and_expression)
+    $default  reduce using rule 37 (and_expression)
 
 
 State 81
 
-   40 relation: relation RELOP term •
-   42 term: term • ADDOP factor
+   41 relation: relation RELOP term •
+   43 term: term • ADDOP factor
 
     ADDOP  shift, and go to state 67
 
-    $default  reduce using rule 40 (relation)
+    $default  reduce using rule 41 (relation)
 
 
 State 82
 
-   42 term: term ADDOP factor •
-   44 factor: factor • MULOP exponent
-   45       | factor • REMOP exponent
+   43 term: term ADDOP factor •
+   45 factor: factor • MULOP exponent
+   46       | factor • REMOP exponent
 
     MULOP  shift, and go to state 68
     REMOP  shift, and go to state 69
 
-    $default  reduce using rule 42 (term)
+    $default  reduce using rule 43 (term)
 
 
 State 83
 
-   44 factor: factor MULOP exponent •
-   47 exponent: exponent • EXPOP primary
-
-    EXPOP  shift, and go to state 70
-
-    $default  reduce using rule 44 (factor)
-
-
-State 84
-
-   45 factor: factor REMOP exponent •
-   47 exponent: exponent • EXPOP primary
+   45 factor: factor MULOP exponent •
+   48 exponent: exponent • EXPOP primary
 
     EXPOP  shift, and go to state 70
 
     $default  reduce using rule 45 (factor)
 
 
+State 84
+
+   46 factor: factor REMOP exponent •
+   48 exponent: exponent • EXPOP primary
+
+    EXPOP  shift, and go to state 70
+
+    $default  reduce using rule 46 (factor)
+
+
 State 85
 
-   47 exponent: exponent EXPOP primary •
+   48 exponent: exponent EXPOP primary •
 
-    $default  reduce using rule 47 (exponent)
+    $default  reduce using rule 48 (exponent)
 
 
 State 86
@@ -1103,28 +1107,35 @@ State 87
 
 State 88
 
-   31 reductions: reductions statement_ •
+   32 reductions: reductions statement_ •
 
-    $default  reduce using rule 31 (reductions)
+    $default  reduce using rule 32 (reductions)
 
 
 State 89
 
    21 statement: IF expression THEN statement_ • ELSE statement_ ENDIF
 
-    ELSE  shift, and go to state 91
+    ELSE  shift, and go to state 92
 
 
 State 90
 
-   22 statement: CASE expression IS optional_case • OTHERS ARROW statement_ ENDCASE
-   23 optional_case: optional_case • WHEN INT_LITERAL ARROW statement_
+   24 optional_case: error • ';'
 
-    OTHERS  shift, and go to state 92
-    WHEN    shift, and go to state 93
+    ';'  shift, and go to state 93
 
 
 State 91
+
+   22 statement: CASE expression IS optional_case • OTHERS ARROW statement_ ENDCASE
+   23 optional_case: optional_case • WHEN INT_LITERAL ARROW statement_
+
+    OTHERS  shift, and go to state 94
+    WHEN    shift, and go to state 95
+
+
+State 92
 
    21 statement: IF expression THEN statement_ ELSE • statement_ ENDIF
 
@@ -1139,7 +1150,7 @@ State 91
     CASE          shift, and go to state 30
     '('           shift, and go to state 31
 
-    statement_      go to state 94
+    statement_      go to state 96
     statement       go to state 33
     expression      go to state 34
     or_expression   go to state 35
@@ -1152,28 +1163,35 @@ State 91
     primary         go to state 42
 
 
-State 92
-
-   22 statement: CASE expression IS optional_case OTHERS • ARROW statement_ ENDCASE
-
-    ARROW  shift, and go to state 95
-
-
 State 93
 
-   23 optional_case: optional_case WHEN • INT_LITERAL ARROW statement_
+   24 optional_case: error ';' •
 
-    INT_LITERAL  shift, and go to state 96
+    $default  reduce using rule 24 (optional_case)
 
 
 State 94
 
-   21 statement: IF expression THEN statement_ ELSE statement_ • ENDIF
+   22 statement: CASE expression IS optional_case OTHERS • ARROW statement_ ENDCASE
 
-    ENDIF  shift, and go to state 97
+    ARROW  shift, and go to state 97
 
 
 State 95
+
+   23 optional_case: optional_case WHEN • INT_LITERAL ARROW statement_
+
+    INT_LITERAL  shift, and go to state 98
+
+
+State 96
+
+   21 statement: IF expression THEN statement_ ELSE statement_ • ENDIF
+
+    ENDIF  shift, and go to state 99
+
+
+State 97
 
    22 statement: CASE expression IS optional_case OTHERS ARROW • statement_ ENDCASE
 
@@ -1188,7 +1206,7 @@ State 95
     CASE          shift, and go to state 30
     '('           shift, and go to state 31
 
-    statement_      go to state 98
+    statement_      go to state 100
     statement       go to state 33
     expression      go to state 34
     or_expression   go to state 35
@@ -1201,28 +1219,28 @@ State 95
     primary         go to state 42
 
 
-State 96
+State 98
 
    23 optional_case: optional_case WHEN INT_LITERAL • ARROW statement_
 
-    ARROW  shift, and go to state 99
+    ARROW  shift, and go to state 101
 
 
-State 97
+State 99
 
    21 statement: IF expression THEN statement_ ELSE statement_ ENDIF •
 
     $default  reduce using rule 21 (statement)
 
 
-State 98
+State 100
 
    22 statement: CASE expression IS optional_case OTHERS ARROW statement_ • ENDCASE
 
-    ENDCASE  shift, and go to state 100
+    ENDCASE  shift, and go to state 102
 
 
-State 99
+State 101
 
    23 optional_case: optional_case WHEN INT_LITERAL ARROW • statement_
 
@@ -1237,7 +1255,7 @@ State 99
     CASE          shift, and go to state 30
     '('           shift, and go to state 31
 
-    statement_      go to state 101
+    statement_      go to state 103
     statement       go to state 33
     expression      go to state 34
     or_expression   go to state 35
@@ -1250,14 +1268,14 @@ State 99
     primary         go to state 42
 
 
-State 100
+State 102
 
    22 statement: CASE expression IS optional_case OTHERS ARROW statement_ ENDCASE •
 
     $default  reduce using rule 22 (statement)
 
 
-State 101
+State 103
 
    23 optional_case: optional_case WHEN INT_LITERAL ARROW statement_ •
 

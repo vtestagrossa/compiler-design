@@ -1,6 +1,8 @@
-/* Compiler Theory and Design
-   Vincent Testagrossa
-   23OCT2023 */
+/*	CMSC 430
+	Compiler Theory and Design
+	Project 2
+	Vincent Testagrossa
+	05NOV2023 */
 
 /*	This file contains flex input file. Added entries for real,
 	changed the regex to match both comment types, modified the 

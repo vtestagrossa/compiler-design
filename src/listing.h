@@ -1,5 +1,8 @@
 // CMSC 430
-// Dr. Duane J. Jarc
+// Compiler Theory and Design
+// Project 2
+// 05NOV2023
+// Vincent Testagrossa
 
 // This file contains the function prototypes for the functions that produce the // compilation listing
 

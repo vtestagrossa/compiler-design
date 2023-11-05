@@ -1,4 +1,11 @@
 
+/*
+	CMSC 430
+	Compiler Theory and Design
+	Project 2
+	Vincent Testagrossa
+	05NOV2023
+*/
 #line 3 "lex.yy.c"
 
 #define  YY_INT_ALIGNED short int

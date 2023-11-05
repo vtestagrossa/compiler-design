@@ -1,4 +1,4 @@
-Sun Nov  5 12:04:46 PM EST 2023
+Sun Nov  5 12:11:29 PM EST 2023
 testsyntax5.txt
 ----------------------------------------------------------
 
@@ -19,8 +19,9 @@ syntax error, unexpected MULOP
 syntax error, unexpected ARROW, expecting INT_LITERAL
   12              when 2 => c;
   13          endcase;
+syntax error, unexpected ENDCASE, expecting OTHERS or WHEN
   14      endif;
   15  end;     
 Lexical errors:    0
 Semantic errors:    0
-Syntactic errors:    4
+Syntactic errors:    5

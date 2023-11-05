@@ -1,5 +1,8 @@
-/* Compiler Theory and Design
-   Dr. Duane J. Jarc */
+/*	CMSC 430
+	Compiler Theory and Design
+	Project 2
+	05NOV2023
+	Vincent Testagrossa */
 
 %{
 
@@ -72,6 +75,7 @@ statement:
 
 optional_case:
 	optional_case WHEN INT_LITERAL ARROW statement_ |
+	error ';' |
 	;
 
 operator:

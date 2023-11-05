@@ -1,5 +1,5 @@
 // Compiler Theory and Design
-// Project 1
+// Project 2
 // 02NOV2023
 // Vincent Testagrossa
 
