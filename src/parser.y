@@ -49,7 +49,8 @@ optional_variable:
 	;
 
 variable:
-	IDENTIFIER ':' type IS statement_ ;
+	IDENTIFIER ':' type IS statement_ |
+	error ';' ;
 
 type:
 	INTEGER |
