@@ -1,11 +1,19 @@
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 testsyntax2.txt
 ----------------------------------------------------------
 
    1  -- Error in function header, missing colon
    2  
-   3  function main a integersyntax error, unexpected INTEGER, expecting ':'
-     
+   3  function main a integer returns integer;
+syntax error, unexpected INTEGER, expecting ':'
+   4      b: integer is 3 * 2;
+   5  begin
+   6      if a <= 0 then
+   7          b + 3;
+   8      else
+   9          b * 4;
+  10      endif;
+  11  end;     
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1

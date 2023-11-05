@@ -1,5 +1,5 @@
 Output Summary
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 test10.txt
 ----------------------------------------------------------
 
@@ -10,7 +10,7 @@ test10.txt
    5      a and b > 1;
    6  end;     
 Compiled Successfully
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 test11.txt
 ----------------------------------------------------------
 
@@ -21,7 +21,7 @@ test11.txt
    5      9 + 2 - (5 - 1) / 2 rem 3 * 3 ** 1 ** 2;
    6  end;     
 Compiled Successfully
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 test12.txt
 ----------------------------------------------------------
 
@@ -32,7 +32,7 @@ test12.txt
    5      5 > 8 and 3 = 3 or 9 < 1 and not (3 /= 7) or 6 <= 7 and 3 >= 9 or not true and not not false;
    6  end;     
 Compiled Successfully
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 test13.txt
 ----------------------------------------------------------
 
@@ -54,7 +54,7 @@ test13.txt
   16       endif;
   17  end;     
 Compiled Successfully
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 test14.txt
 ----------------------------------------------------------
 
@@ -77,7 +77,7 @@ test14.txt
   17      endcase;
   18  end;     
 Compiled Successfully
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 test15.txt
 ----------------------------------------------------------
 
@@ -88,7 +88,7 @@ test15.txt
    5      5 > 8 and not 3 = 3 or 9 < 1 and (3 /= 7);
    6  end;     
 Compiled Successfully
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 test1.txt
 ----------------------------------------------------------
 
@@ -99,7 +99,7 @@ test1.txt
    5      7 + 2 * (2  + 4);
    6  end;     
 Compiled Successfully
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 test2.txt
 ----------------------------------------------------------
 
@@ -112,7 +112,7 @@ test2.txt
    7      b + 2 * 8;    
    8  end;     
 Compiled Successfully
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 test3.txt
 ----------------------------------------------------------
 
@@ -124,7 +124,7 @@ test3.txt
    6      b and 2 < 8 + 1 * 7;    
    7  end;     
 Compiled Successfully
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 test4.txt
 ----------------------------------------------------------
 
@@ -139,7 +139,7 @@ test4.txt
    9      endreduce;    
   10  end;     
 Compiled Successfully
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 test5.txt
 ----------------------------------------------------------
 
@@ -151,7 +151,7 @@ test5.txt
    6      true and 2 < 8.E+1 + 1.7E-2 * 7.3E2;    
    7  end;     
 Compiled Successfully
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 test6.txt
 ----------------------------------------------------------
 
@@ -166,7 +166,7 @@ test6.txt
    9      endif;
   10  end;     
 Compiled Successfully
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 test7.txt
 ----------------------------------------------------------
 
@@ -182,7 +182,7 @@ test7.txt
   10      endcase;  
   11  end;     
 Compiled Successfully
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 test8.txt
 ----------------------------------------------------------
 
@@ -195,7 +195,7 @@ test8.txt
    7      b + 1 - c;
    8  end;     
 Compiled Successfully
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 test9.txt
 ----------------------------------------------------------
 
@@ -206,7 +206,7 @@ test9.txt
    5      a + 1;
    6  end;     
 Compiled Successfully
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 testsyntax1.txt
 ----------------------------------------------------------
 
@@ -220,30 +220,51 @@ syntax error, unexpected INT_LITERAL, expecting ';'
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 testsyntax2.txt
 ----------------------------------------------------------
 
    1  -- Error in function header, missing colon
    2  
-   3  function main a integersyntax error, unexpected INTEGER, expecting ':'
-     
+   3  function main a integer returns integer;
+syntax error, unexpected INTEGER, expecting ':'
+   4      b: integer is 3 * 2;
+   5  begin
+   6      if a <= 0 then
+   7          b + 3;
+   8      else
+   9          b * 4;
+  10      endif;
+  11  end;     
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 testsyntax3.txt
 ----------------------------------------------------------
 
    1  -- Error in variable declaration
    2  
    3  function main a: integer returns integer;
-   4      b integersyntax error, unexpected INTEGER, expecting ':'
-     
+   4      b integer is
+syntax error, unexpected INTEGER, expecting ':'
+   5          if a > 5 then
+   6              a * 3;
+   7          else
+   8              2 + a;
+   9          endif;
+  10      c: real is 3.5;
+  11  begin
+  12      if a <= 0 then
+  13          b + 3;
+  14      else
+  15          b * 4;
+  16      endif;
+  17  end;     
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    1
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 testsyntax4.txt
 ----------------------------------------------------------
 
@@ -261,14 +282,29 @@ syntax error, unexpected ENDCASE, expecting OTHERS or WHEN
 Lexical errors:    0
 Semantic errors:    0
 Syntactic errors:    2
-Sun Nov  5 11:35:42 AM EST 2023
+Sun Nov  5 12:03:02 PM EST 2023
 testsyntax5.txt
 ----------------------------------------------------------
 
    1  // Multiple errors
    2  
-   3  function main a integersyntax error, unexpected INTEGER, expecting ':'
-     
+   3  function main a integer returns real;
+syntax error, unexpected INTEGER, expecting ':'
+   4      b: integer is * 2;
+syntax error, unexpected MULOP
+   5      c: real is 6.0;
+   6  begin
+   7      if a > c then
+   8          b + / 4.;
+syntax error, unexpected MULOP
+   9      else
+  10          case b is
+  11              when => 2;
+syntax error, unexpected ARROW, expecting INT_LITERAL
+  12              when 2 => c;
+  13          endcase;
+  14      endif;
+  15  end;     
 Lexical errors:    0
 Semantic errors:    0
-Syntactic errors:    1
+Syntactic errors:    4

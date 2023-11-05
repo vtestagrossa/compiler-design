@@ -29,7 +29,8 @@ function:
 	function_header optional_variable body ;
 	
 function_header:	
-	FUNCTION IDENTIFIER parameters RETURNS type ';' ;
+	FUNCTION IDENTIFIER parameters RETURNS type ';' |
+	error ';' ;
 
 parameters:
 	parameter optional_parameter |
