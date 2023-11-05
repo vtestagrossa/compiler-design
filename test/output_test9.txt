@@ -1,4 +1,4 @@
-Fri Nov  3 11:49:01 AM EDT 2023
+Sun Nov  5 11:35:42 AM EST 2023
 test9.txt
 ----------------------------------------------------------
 
@@ -7,6 +7,5 @@ test9.txt
    3  function main a: integer returns integer;
    4  begin
    5      a + 1;
-   6  end;
-   7       
+   6  end;     
 Compiled Successfully

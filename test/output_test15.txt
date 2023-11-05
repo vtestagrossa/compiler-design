@@ -1,11 +1,11 @@
 Sun Nov  5 11:35:42 AM EST 2023
-test12.txt
+test15.txt
 ----------------------------------------------------------
 
    1  -- Relational and logical operators
    2  
    3  function main returns boolean;
    4  begin
-   5      5 > 8 and 3 = 3 or 9 < 1 and not (3 /= 7) or 6 <= 7 and 3 >= 9 or not true and not not false;
+   5      5 > 8 and not 3 = 3 or 9 < 1 and (3 /= 7);
    6  end;     
 Compiled Successfully

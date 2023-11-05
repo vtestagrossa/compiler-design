@@ -17,9 +17,7 @@ void yyerror(const char* message);
 %define parse.error verbose
 
 %token IDENTIFIER
-%token INT_LITERAL
-%token REAL_LITERAL
-%token BOOL_LITERAL
+%token INT_LITERAL REAL_LITERAL BOOL_LITERAL
 
 %token ADDOP MULOP RELOP ANDOP OROP NOTOP ARROW EXPOP REMOP
 
@@ -55,7 +53,7 @@ variable:
 type:
 	INTEGER |
 	BOOLEAN |
-	REAL;
+	REAL ;
 
 body:
 	BEGIN_ statement_ END ';' ;
@@ -68,7 +66,7 @@ statement:
 	expression |
 	REDUCE operator reductions ENDREDUCE |
 	IF expression THEN statement_ ELSE statement_ ENDIF |
-	CASE expression IS optional_case OTHERS ARROW statement_ ENDCASE;
+	CASE expression IS optional_case OTHERS ARROW statement_ ENDCASE ;
 
 optional_case:
 	optional_case WHEN INT_LITERAL ARROW statement_ |
@@ -76,26 +74,46 @@ optional_case:
 
 operator:
 	ADDOP |
-	MULOP ;
+	MULOP |
+	REMOP |
+	EXPOP |
+	OROP |
+	ANDOP ;
 
 reductions:
 	reductions statement_ |
 	;
-		    
+
 expression:
-	expression ANDOP relation |
+	or_expression ;
+
+or_expression:
+	or_expression OROP and_expression |
+	and_expression ;
+
+and_expression: 
+	and_expression ANDOP not_expression |
+	not_expression ;
+
+not_expression:
+	NOTOP not_expression |
 	relation ;
 
 relation:
 	relation RELOP term |
-	term;
+	term ;
 
 term:
 	term ADDOP factor |
 	factor ;
       
 factor:
-	factor MULOP primary |
+	factor MULOP exponent |
+	factor REMOP exponent |
+	exponent ;
+
+exponent:
+	exponent EXPOP primary |
 	primary ;
 
 primary:
