@@ -1,0 +1,30 @@
+Discussion 5
+Mon Nov 13 01:12:09 PM EST 2023
+----------------------------------------------------------
+
+   1  function main a: integer, b: real, c: boolean returns real;
+   2      d: integer is 8;
+   3      e: boolean is not c;
+   4      f: real is 5.9;
+   5  begin
+   6      if not (a < 0 or a > 0) and b /= 0 and e = false then
+   7          reduce +
+   8              a / b;
+   9              b * a ** 2;
+  10              f rem b;
+  11          endreduce;
+  12      else
+  13          case a is
+  14              when 1 => 1;
+  15              when 2 => 2;
+  16              when 3 =>
+  17                  if b <= 10 and b >= 1 then
+  18                      b / a + f * b ** 2 - f rem b;
+  19                  else
+  20                      a * d + d ** 2 - d rem a;
+  21                  endif;
+  22              others => 111;
+  23          endcase;
+  24      endif;
+  25  end;     
+Compiled Successfully
