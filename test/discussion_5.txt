@@ -1,11 +1,11 @@
 Discussion 5
-Mon Nov 13 01:12:09 PM EST 2023
+Mon Nov 13 02:18:36 PM EST 2023
 ----------------------------------------------------------
 
    1  function main a: integer, b: real, c: boolean returns real;
    2      d: integer is 8;
    3      e: boolean is not c;
-   4      f: real is 5.9;
+   4      f: real is 1.9 + a;
    5  begin
    6      if not (a < 0 or a > 0) and b /= 0 and e = false then
    7          reduce +
