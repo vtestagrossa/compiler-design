@@ -1,11 +1,0 @@
-Sun Nov  5 12:11:28 PM EST 2023
-test9.txt
-----------------------------------------------------------
-
-   1  -- Single parameter declaration
-   2  
-   3  function main a: integer returns integer;
-   4  begin
-   5      a + 1;
-   6  end;     
-Compiled Successfully

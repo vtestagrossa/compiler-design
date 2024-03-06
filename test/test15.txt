@@ -1,6 +1,0 @@
--- Relational and logical operators
-
-function main returns boolean;
-begin
-    5 > 8 and not 3 = 3 or 9 < 1 and (3 /= 7);
-end;

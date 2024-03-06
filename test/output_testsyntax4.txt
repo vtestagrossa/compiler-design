@@ -1,18 +1,0 @@
-Sun Nov  5 12:11:29 PM EST 2023
-testsyntax4.txt
-----------------------------------------------------------
-
-   1  -- Multiple errors, error in when clause and missing others clause
-   2  
-   3  function main a: integer returns integer;
-   4  begin
-   5      case a is
-   6           when 1 => a 2;
-syntax error, unexpected INT_LITERAL, expecting ';'
-   7           when 2 => 5;
-   8      endcase;
-syntax error, unexpected ENDCASE, expecting OTHERS or WHEN
-   9  end;     
-Lexical errors:    0
-Semantic errors:    0
-Syntactic errors:    2

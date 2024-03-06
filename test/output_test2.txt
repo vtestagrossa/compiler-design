@@ -1,13 +1,0 @@
-Sun Nov  5 12:11:28 PM EST 2023
-test2.txt
-----------------------------------------------------------
-
-   1  -- Function with an Integer Variable
-   2  
-   3  function test2 returns integer;
-   4      b: integer is 9 * 2 + 8;
-   5      c: integer is 10;
-   6  begin
-   7      b + 2 * 8;    
-   8  end;     
-Compiled Successfully

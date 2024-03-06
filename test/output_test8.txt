@@ -1,13 +1,0 @@
-Sun Nov  5 12:11:28 PM EST 2023
-test8.txt
-----------------------------------------------------------
-
-   1  -- Multiple integer variable initialization
-   2  
-   3  function main returns integer;
-   4      b: integer is 5 + 1 - 4;
-   5      c: integer is 2 + 3;
-   6  begin
-   7      b + 1 - c;
-   8  end;     
-Compiled Successfully

@@ -1,15 +1,0 @@
-Sun Nov  5 12:11:28 PM EST 2023
-test4.txt
-----------------------------------------------------------
-
-   1  -- Function with a Reduction
-   2  
-   3  function test4 returns integer;
-   4  begin
-   5      reduce *
-   6           2 + 8;
-   7           6;
-   8           3;
-   9      endreduce;    
-  10  end;     
-Compiled Successfully

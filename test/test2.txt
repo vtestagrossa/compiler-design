@@ -1,8 +1,0 @@
--- Function with an Integer Variable
-
-function test2 returns integer;
-    b: integer is 9 * 2 + 8;
-    c: integer is 10;
-begin
-    b + 2 * 8;    
-end;

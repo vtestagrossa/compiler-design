@@ -1,15 +1,0 @@
-Sun Nov  5 12:11:28 PM EST 2023
-test6.txt
-----------------------------------------------------------
-
-   1  -- Conditional expression
-   2  
-   3  function main returns integer;
-   4  begin
-   5      if 5 + 4 >= 9 then
-   6          6 + 9 * 3;
-   7      else
-   8          8 - 9 / 7;
-   9      endif;
-  10  end;     
-Compiled Successfully

@@ -1,9 +1,0 @@
--- Multiple errors, error in when clause and missing others clause
-
-function main a: integer returns integer;
-begin
-    case a is
-         when 1 => a 2;
-         when 2 => 5;
-    endcase;
-end;

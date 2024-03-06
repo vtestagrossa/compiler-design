@@ -1,11 +1,0 @@
-Sun Nov  5 12:11:28 PM EST 2023
-test10.txt
-----------------------------------------------------------
-
-   1  -- Two parameter declarations
-   2  
-   3  function main a: boolean, b: integer returns boolean;
-   4  begin
-   5      a and b > 1;
-   6  end;     
-Compiled Successfully
